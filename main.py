@@ -11,7 +11,11 @@ today = datetime.strptime(str(nowtime.date()), "%Y-%m-%d")  # 今天的日期
 
 man_birth = os.getenv("MAN_BIRTH")
 
+print(man_birth)
+
 women_birth = os.getenv("WOMEN_BIRTH");
+
+print(women_birth)
 
 start_date = os.getenv('START_DATE')
 city = os.getenv('CITY')
@@ -99,6 +103,8 @@ except WeChatClientException as e:
     exit(502)
 
 memorialDay = os.getenv("SIG_DAY")
+
+print(memorialDay)
 
 wm = WeChatMessage(client)
 weather = get_weather()
