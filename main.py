@@ -97,6 +97,15 @@ data = {
     "value": os.getenv('USER'),
     "color": get_random_color()
   },
+  "howOld":{
+    "value": 18
+  },
+  "nextBirthday":{
+    "value": get_birthday_left()
+  },
+  "nextMemorialDay":{
+    "value": get_memorial_days_count()
+  },
   "city": {
     "value": city,
     "color": get_random_color()
