@@ -147,11 +147,7 @@ data = {
     "temperature": {
         "value": math.floor(weather['temp']),
         "color": get_random_color()
-    },
-    "birthday_left": {
-        "value": get_birthday_left(),
-        "color": get_random_color()
-    },
+    }
 }
 
 if __name__ == '__main__':
