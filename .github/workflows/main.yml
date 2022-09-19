@@ -23,6 +23,9 @@ jobs:
     - run: pip install -r ./requirements.txt && python ./main.py
 
     env:
+      SIG_DAY: ${{ secrets.SIG_DAY }}
+      MAN_BIRTH: ${{ secrets.MAN_BIRTH }}
+      WOMAN_BIRTH: ${{ secrets.WOMAN_BIRTH }}
       APP_ID: ${{ secrets.APP_ID }}
       APP_SECRET: ${{ secrets.APP_SECRET }}
       TEMPLATE_ID: ${{ secrets.TEMPLATE_ID }}
