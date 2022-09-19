@@ -18,6 +18,9 @@ women_birth = os.getenv("WOMEN_BIRTH");
 print(women_birth)
 
 start_date = os.getenv('START_DATE')
+
+print(start_date)
+
 city = os.getenv('CITY')
 birthday = os.getenv('BIRTHDAY')
 
