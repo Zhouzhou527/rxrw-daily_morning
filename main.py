@@ -93,7 +93,7 @@ if weather is None:
   print('获取天气失败')
   exit(422)
 data = {
-  "name":{
+  "friendName":{
     "value": os.getenv('USER'),
     "color": get_random_color()
   },
