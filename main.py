@@ -16,6 +16,8 @@ birthday = os.getenv('BIRTHDAY')
 app_id = os.getenv('APP_ID')
 app_secret = os.getenv('APP_SECRET')
 
+username = os.getenv("TO_WHO")
+
 user_ids = os.getenv('USER_ID', '').split("\n")
 template_id = os.getenv('TEMPLATE_ID')
 
@@ -94,17 +96,20 @@ if weather is None:
   exit(422)
 data = {
   "friendName":{
-    "value": os.getenv('USER_NAME'),
+    "value": username,
     "color": get_random_color()
   },
   "howOld":{
-    "value": 18
+    "value": 18,
+    "color": get_random_color()
   },
   "nextBirthday":{
-    "value": get_birthday_left()
+    "value": get_birthday_left(),
+    "color": get_random_color()
   },
   "nextMemorialDay":{
-    "value": get_memorial_days_count()
+    "value": get_memorial_days_count(),
+    "color": get_random_color()
   },
   "city": {
     "value": city,
