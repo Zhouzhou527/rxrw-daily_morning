@@ -94,7 +94,7 @@ if weather is None:
   exit(422)
 data = {
   "friendName":{
-    "value": os.getenv('USER'),
+    "value": os.getenv('USER_NAME'),
     "color": get_random_color()
   },
   "howOld":{
