@@ -98,6 +98,8 @@ except WeChatClientException as e:
     print('微信获取 token 失败，请检查 APP_ID 和 APP_SECRET，或当日调用量是否已达到微信限制。')
     exit(502)
 
+memorialDay = os.getenv("SIG_DAY")
+
 wm = WeChatMessage(client)
 weather = get_weather()
 if weather is None:
@@ -116,8 +118,12 @@ data = {
         "value": get_birthday_left(women_birth),
         "color": get_random_color()
     },
-    "loveDays": {
+    "loveDays":{
         "value": get_memorial_days_count(),
+        "color": get_random_color()
+    },
+    "sig": {
+        "value": get_birthday_left(memorialDay),
         "color": get_random_color()
     },
     "city": {
